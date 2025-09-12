@@ -31,7 +31,9 @@ architecture_task = Task(
     - Create technical specifications
     - Define development environment setup
     
-    Requirements: {requirements}""",
+    Project idea: {project_idea}
+    Target audience: {target_audience}
+    Timeline: {timeline}""",
     agent=software_architect,
     expected_output="Comprehensive technical architecture document with technology choices, system design, and specifications"
 )
@@ -49,8 +51,9 @@ development_task = Task(
     - Follow coding best practices and standards
     - Create comprehensive documentation
     
-    Architecture: {architecture}
-    Requirements: {requirements}""",
+    Project idea: {project_idea}
+    Target audience: {target_audience}
+    Timeline: {timeline}""",
     agent=full_stack_developer,
     expected_output="Complete application code with proper structure, documentation, and basic tests"
 )
@@ -68,8 +71,9 @@ testing_task = Task(
     - Create user acceptance test cases
     - Document bug reporting and tracking process
     
-    Application code: {application_code}
-    Requirements: {requirements}""",
+    Project idea: {project_idea}
+    Target audience: {target_audience}
+    Timeline: {timeline}""",
     agent=qa_engineer,
     expected_output="Complete testing strategy with test plans, test cases, and quality assurance guidelines"
 )
@@ -88,8 +92,9 @@ deployment_task = Task(
     - Plan scaling strategy
     - Estimate costs and resource requirements
     
-    Application: {application_code}
-    Architecture: {architecture}""",
+    Project idea: {project_idea}
+    Target audience: {target_audience}
+    Timeline: {timeline}""",
     agent=devops_engineer,
     expected_output="Complete deployment guide with infrastructure setup, CI/CD pipeline, and operational procedures"
 )

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🐍 Pixel Snake</h1>
+            <div class="game-info">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="high-score">High Score: <span id="high-score">0</span></div>
+                <div class="level">Level: <span id="level">1</span></div>
+            </div>
+        </div>
+        
+        <div id="game-screen" class="game-screen">
+            <div id="start-screen" class="screen start-screen">
+                <h2>🎮 Ready to Play?</h2>
+                <p>Use arrow keys or WASD to control your snake</p>
+                <p>Eat the red food to grow and increase your score</p>
+                <p>Don't hit the walls or yourself!</p>
+                <button id="start-btn" class="game-btn">Start Game</button>
+                <div class="difficulty-selector">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="game-area" class="screen game-area hidden">
+                <canvas id="game-canvas" width="400" height="400"></canvas>
+                <div class="game-controls">
+                    <button id="pause-btn" class="game-btn">Pause</button>
+                </div>
+            </div>
+            
+            <div id="pause-screen" class="screen pause-screen hidden">
+                <h2>⏸️ Game Paused</h2>
+                <button id="resume-btn" class="game-btn">Resume</button>
+                <button id="restart-btn" class="game-btn">Restart</button>
+                <button id="main-menu-btn" class="game-btn">Main Menu</button>
+            </div>
+            
+            <div id="game-over-screen" class="screen game-over-screen hidden">
+                <h2>💀 Game Over!</h2>
+                <p>Your Score: <span id="final-score">0</span></p>
+                <p id="new-high-score" class="hidden">🎉 New High Score!</p>
+                <button id="play-again-btn" class="game-btn">Play Again</button>
+                <button id="menu-btn" class="game-btn">Main Menu</button>
+            </div>
+        </div>
+        
+        <div class="game-footer">
+            <p>Made with ❤️ by CrewAI Development Team</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
