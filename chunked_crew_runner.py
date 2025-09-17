@@ -190,10 +190,11 @@ def run_space_invaders_chunked():
     print("🚀 Starting chunked space invaders generation...")
     results = runner.run_chunked_crew(dev_team_crew, project_idea)
 
-    # Save results
-    output_file = f"games/space-invaders-chunked/output_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    # Save results to top-level Projects directory (not buried in framework)
+    output_dir = "/Users/brettstark/Projects/space-invaders-game"
+    output_file = f"{output_dir}/output_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     import os
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    os.makedirs(output_dir, exist_ok=True)
 
     with open(output_file, 'w') as f:
         json.dump(results, f, indent=2, default=str)
